@@ -5,6 +5,7 @@ import { createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfi
 import {auth} from "../utils/firebase"
 import { useDispatch } from 'react-redux';
 import { addUser } from '../utils/slices/userSlice';
+import { BACKGROUND_LOGO_URL, SIGN_IN_LOGO_URL } from '../utils/constants';
 
 const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true)
@@ -26,7 +27,7 @@ const Login = () => {
             // Signed up 
             const user = userCredential.user;
               updateProfile(user, {
-                displayName: name.current.value, photoURL :"https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+                displayName: name.current.value, photoURL : SIGN_IN_LOGO_URL
               }).then(() => {
                 // Profile updated!
                 const {uid, email, displayName, photoURL} = auth.currentUser
@@ -71,7 +72,7 @@ const Login = () => {
     <div>
       <Header />
       <div className=" absolute">
-        <img src="https://assets.nflxext.com/ffe/siteui/vlv3/f268d374-734d-474f-ad13-af5ba87ef9fc/web/IN-en-20250210-TRIFECTA-perspective_92338d5d-6ccd-4b1a-8536-eb2b0240a55e_large.jpg" alt="" />
+        <img src={BACKGROUND_LOGO_URL} alt="Background image" />
       </div>
       <form className="w-1/3 absolute text-white mt-20 p-14 rounded-lg mx-auto left-0 right-0 bg-black/80 " onSubmit={(e)=>e.preventDefault()}>
         <h1 className="mb-4 text-3xl font-bold">{isSignIn?"Sign In":"Sign Up"}</h1>
