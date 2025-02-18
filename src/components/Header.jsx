@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { addUser, removeUser } from '../utils/slices/userSlice';
 import { signOut } from "firebase/auth";
 import { NETFLIX_LOGO_URL } from '../utils/constants';
+import { removeMovies } from '../utils/slices/movieSlice';
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -31,6 +32,7 @@ const Header = () => {
   const signOutHandler =()=>{
     signOut(auth).then(() => {
       dispatch(removeUser())
+      dispatch(removeMovies())
       navigate('/')
       // Sign-out successful.
     }).catch((error) => {
