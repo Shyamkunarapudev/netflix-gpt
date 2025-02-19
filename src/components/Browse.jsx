@@ -1,5 +1,6 @@
 import Header from './Header'
 import MainContainer from './MainContainer'
+import Secondary from './Secondary'
 
 
 const Browse = () => {
@@ -8,7 +9,7 @@ const Browse = () => {
     <div>
       <Header />
       <MainContainer />
-      
+      <Secondary />
     </div>
   )
 }
