@@ -13,7 +13,7 @@ const Secondary = () => {
     <div className='bg-black pl-4'>
       <div className=" -mt-44 ">
         <div>
-          {MoviesData.map((el, arr)=><MovieListComponent genre={GENRE[arr]} data={el} />)}
+          {MoviesData.map((el, arr)=><MovieListComponent key={arr} genre={GENRE[arr]} data={el} />)}
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ const MovieListComponent = ({genre, data}) => {
       <h1 className="text-2xl font-bold py-3 z-10 relative">{genre} &gt;</h1>
       <div className="flex overflow-x-scroll scroll-smooth no-scrollbar">
         <div className="flex">
-          {data.map((em)=><MovieCard movieInfo={em}/>)}
+          {data.map((em, arr)=><MovieCard key={arr} movieInfo={em}/>)}
         </div>
       </div>
     </div>
