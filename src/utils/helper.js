@@ -13,12 +13,3 @@ export const fetchHelper = async(movie)=>{
   return json
 }
 
-
-// const filteredMovie = dbMovie.filter((m)=>m.Title.toLowerCase() === movie.movie.toLowerCase())
-// console.log(dbMovie)
-// setFindMovie(filteredMovie)
-
-
-// const [findMovie, setFindMovie] = useState(null)
-// const dbMovie = useSelector((store) => store.movie.listOfMoviesData)
-// console.log(dbMovie)

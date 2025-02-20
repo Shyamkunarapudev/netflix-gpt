@@ -65,7 +65,7 @@ const Header = () => {
         </select>}
        </div>
         <div className="">
-         <button className='px-2 py-1 mx-3  bg-sky-700 font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
+         <button className='px-2 py-1 ml-3  bg-sky-700 font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
         </div>
         <div>
           <button className='px-2 py-1 mx-3  bg-red-600 font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>

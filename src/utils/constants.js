@@ -1,6 +1,6 @@
 export const API_KEY = "&apikey=c7891c1b"
 
-export const OPEN_AI_KEY = "sk-7db5736eb272429c8ed0f3329c18337d"
+export const OPEN_AI_KEY = "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"
 
 export const OMDB_URL = "https://www.omdbapi.com/?"
 
