@@ -7,7 +7,7 @@ import { addUser, removeUser } from '../utils/slices/userSlice';
 import { signOut } from "firebase/auth";
 import { NETFLIX_LOGO_URL, SIGN_IN_LOGO_URL } from '../utils/constants';
 import { removeMovies } from '../utils/slices/movieSlice';
-import { gptTogglePage } from '../utils/slices/gptSlice';
+import { gptTogglePage, removeSearchMovieList } from '../utils/slices/gptSlice';
 import { SUPPORTED_LAUNGUAGES } from '../utils/constants';
 import { changeLanguage } from '../utils/slices/languageSlice';
 
@@ -47,6 +47,7 @@ const Header = () => {
 
   const netFlixhandler = () =>{
     dispatch(gptTogglePage())
+    dispatch(removeSearchMovieList())
   }
 
   const hadleLanguage =(e)=>{

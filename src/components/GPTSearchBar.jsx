@@ -1,16 +1,18 @@
 import React, { useRef } from 'react'
 import { BACKGROUND_LOGO_URL } from '../utils/constants'
 import languages from '../utils/launguageConstants'
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import openai from '../utils/openai'
+import { addSearchMoviesList } from '../utils/slices/gptSlice'
 
 const GPTSearchBar = () => {
   const searchText = useRef(null)
   const lang = useSelector(store=> store.language.selectedLanguage)
+  const dispatch = useDispatch()
 
   const handleGPTSearch = async()=>{
     console.log(searchText.current.value)
-    const gptQuary = "Act as a movie recommanded system as per quary :" + searchText.current.value + " . give me 10 movies comma superate as like exam. Example: Lucky Baskhar, Saripodhaa Sanivaaram, sarrainodu, Akhanda, Pushpa 2: The Rule"
+    const gptQuary = "Act as a movie recommanded system. Quary:" + searchText.current.value + " . give me 5 movies info in json formate as per quary . Example: {data:[{movie: Lucky Buskhar, hero: Dulquer Salmaan,director:Venky Atluri},{movie:Saripodhaa Sanivaaram, hero:Nani, director:Vivek Athreya}]}"
 
     const gptResults = await openai.chat.completions.create({
       messages: [
@@ -23,6 +25,10 @@ const GPTSearchBar = () => {
       top_p: 1
     });
 
+    const removeOne = gptResults?.choices[0]?.message.content.replaceAll('```','')
+    const removeJson = removeOne.replace("json",'')
+    const stringToObject = JSON.parse(removeJson)
+    dispatch(addSearchMoviesList(stringToObject))
   }
 
   return (
