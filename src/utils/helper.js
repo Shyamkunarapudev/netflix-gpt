@@ -1,5 +1,5 @@
 import movieList from "./movieList"
-import { API_KEY, OMDB_URL } from '../utils/constants'
+import { OMDB_URL } from '../utils/constants'
 
 
 
@@ -8,7 +8,7 @@ export const randomMovie = ()=>{
 }
 
 export const fetchHelper = async(movie)=>{
-  const data = await fetch(OMDB_URL +"t="+movie+API_KEY)
+  const data = await fetch(OMDB_URL +"t="+movie+"&apikey="+import.meta.env.VITE_OMDB_KEY)
   const json = await data.json()
   return json
 }
