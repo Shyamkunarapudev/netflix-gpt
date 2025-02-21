@@ -60,19 +60,19 @@ const Header = () => {
   return (
     <div className='absolute bg-gradient-to-b z-50 from-black w-full px-10 py-4 flex justify-between'>
       <div className="">
-        <img className='w-36 -mt-3' src={NETFLIX_LOGO_URL} alt="" />
+        <img className='w-36 -mt-3 cursor-pointer' src={NETFLIX_LOGO_URL} alt="" />
       </div>
       {user&&<div className="flex">
        <div>
-        {showGPTButton&&<select className='p-2 rounded-lg bg-gray-900 text-white' onChange={hadleLanguage}>
+        {showGPTButton&&<select className='p-2 rounded-lg cursor-pointer bg-gray-900 text-white' onChange={hadleLanguage}>
             {SUPPORTED_LAUNGUAGES.map((lang, arr)=><option key={arr} value={lang.identifier}>{lang.language}</option>)}
         </select>}
        </div>
         <div className="">
-         <button className='px-2 py-1 ml-3  bg-sky-700 font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
+         <button className='px-2 py-1 ml-3 cursor-pointer  bg-sky-700 font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
         </div>
         <div>
-          <button className='px-2 py-1 mx-3  bg-red-600 font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>
+          <button className='px-2 py-1 mx-3 cursor-pointer  bg-red-600 font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>
         </div>
         <img className='w-9 h-9' src={SIGN_IN_LOGO_URL} alt="profile" />
       </div>}

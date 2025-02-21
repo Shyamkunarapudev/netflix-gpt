@@ -15,7 +15,7 @@ const MovieCard = ({movieInfo}) => {
 
   return (
     <div className='w-36 mr-2 z-10'>
-      <img className='rounded-lg' src={movieInfo.Poster} alt="Movie Poster" onClick={infoHandler} />
+      <img className='rounded-lg cursor-pointer' src={movieInfo.Poster} alt="Movie Poster" onClick={infoHandler} />
     </div>
   )
 }

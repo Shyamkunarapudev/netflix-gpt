@@ -14,7 +14,7 @@ const VideoTitle = ({movieTitle, moviePlot, moreInfo}) => {
   }
 
   return (
-    <div className="w-screen h-screen absolute bg-gradient-to-r from-black top-0 left-0 pt-20 px-20 z-10  text-white">
+    <div className="w-screen h-screen absolute bg-gradient-to-r from-black top-0 left-0 pt-20 px-20 z-10 cursor-pointer text-white">
       <h1 className="font-bold text-4xl z-10 my-6 w-1/3">{movieTitle}</h1>
       <p className="font-semibold text-sm/5 w-1/3">{moviePlot}</p>
       <div className="w-1/3 flex mt-6 gap-3">

@@ -24,6 +24,7 @@
 # Tech Stack
 - I used React for Frontend
   - Redux for state management
+  - Styling Tailwind CSS
 - Firebase for Backend & Athuntication
 
 # APIs
