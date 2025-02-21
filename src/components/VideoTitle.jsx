@@ -18,8 +18,8 @@ const VideoTitle = ({movieTitle, moviePlot, moreInfo}) => {
       <h1 className="font-bold text-4xl z-10 my-6 w-1/3">{movieTitle}</h1>
       <p className="font-semibold text-sm/5 w-1/3">{moviePlot}</p>
       <div className="w-1/3 flex mt-6 gap-3">
-        <button className="w-1/2 py-2 text-xl bg-white/80 text-black rounded-lg font-semibold" >Play</button>
-        <button className="w-1/2 py-2 text-xl rounded-lg font-semibold bg-slate-400/50" onClick={moreInfoHandler}>More Info</button>
+        <button className="w-1/2 py-2 text-xl bg-white/80 text-black rounded-lg cursor-pointer font-semibold" >Play</button>
+        <button className="w-1/2 py-2 text-xl rounded-lg font-semibold bg-slate-400/50 cursor-pointer" onClick={moreInfoHandler}>More Info</button>
       </div>
     </div>
   )

@@ -60,7 +60,7 @@ const Header = () => {
   return (
     <div className='absolute bg-gradient-to-b z-50 from-black w-full px-10 py-4 flex justify-between'>
       <div className="">
-        <img className='w-36 -mt-3 cursor-pointer' src={NETFLIX_LOGO_URL} alt="" />
+        <img className='w-36 -mt-3 cursor-pointer' src={NETFLIX_LOGO_URL} alt="Logo"/>
       </div>
       {user&&<div className="flex">
        <div>
@@ -74,7 +74,7 @@ const Header = () => {
         <div>
           <button className='px-2 py-1 mx-3 cursor-pointer  bg-red-600 font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>
         </div>
-        <img className='w-9 h-9' src={SIGN_IN_LOGO_URL} alt="profile" />
+        <img className='w-9 h-9 cursor-pointer' src={SIGN_IN_LOGO_URL} alt="profile" />
       </div>}
     </div>
   )
