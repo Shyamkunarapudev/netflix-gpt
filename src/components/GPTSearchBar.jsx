@@ -11,7 +11,6 @@ const GPTSearchBar = () => {
   const dispatch = useDispatch()
 
   const handleGPTSearch = async()=>{
-    console.log(searchText.current.value)
     const gptQuary = "Act as a movie recommanded system. Quary:" + searchText.current.value + " . give me 5 movies info in json formate as per quary . Example: {data:[{movie: Lucky Buskhar, hero: Dulquer Salmaan,director:Venky Atluri},{movie:Saripodhaa Sanivaaram, hero:Nani, director:Vivek Athreya}]}"
 
     const gptResults = await openai.chat.completions.create({
