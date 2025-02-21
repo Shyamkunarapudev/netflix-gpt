@@ -8,15 +8,18 @@ const Body = () => {
   const router = createBrowserRouter([
     {
       path:"/",
-      element: <Login />
+      element: <Login />,
+      errorElement:<h1>Opps! Somthing went wrong</h1>
     },
     {
       path:"/browse",
-      element: <Browse />
+      element: <Browse />,
+      errorElement:<h1>Opps! Somthing went wrong</h1>
     },
     {
       path:"/browse/info",
-      element: <MoreInfo />
+      element: <MoreInfo />,
+      errorElement:<h1>Opps! Something went wrong</h1>
     }
   ])
 

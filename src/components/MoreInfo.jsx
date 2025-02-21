@@ -5,6 +5,8 @@ import { useNavigate } from 'react-router-dom'
 const MoreInfo = () => {
   const navigate = useNavigate()
   const getMovieInfo = useSelector(store=> store.info)
+  
+  if(!getMovieInfo) return
 
   const {Poster,Title,Actors,Director,Writer,Genre,Language,Released,BoxOffice,imdbRating,Plot } = getMovieInfo
 

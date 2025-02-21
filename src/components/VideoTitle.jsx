@@ -5,8 +5,6 @@ import { addMovieInfo } from '../utils/slices/infoSlice'
 
 const VideoTitle = ({movieTitle, moviePlot, moreInfo}) => {
 
-  console.log(moreInfo)
-
   const dispatch = useDispatch()
   const navigate = useNavigate()
 
