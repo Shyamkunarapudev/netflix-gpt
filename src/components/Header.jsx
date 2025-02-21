@@ -7,6 +7,7 @@ import { addUser, removeUser } from '../utils/slices/userSlice';
 import { signOut } from "firebase/auth";
 import { NETFLIX_LOGO_URL, SIGN_IN_LOGO_URL } from '../utils/constants';
 import { removeMovies } from '../utils/slices/movieSlice';
+import { removeMovieInfo } from "../utils/slices/infoSlice";
 import { gptTogglePage, removeSearchMovieList } from '../utils/slices/gptSlice';
 import { SUPPORTED_LAUNGUAGES } from '../utils/constants';
 import { changeLanguage } from '../utils/slices/languageSlice';
@@ -38,6 +39,8 @@ const Header = () => {
     signOut(auth).then(() => {
       dispatch(removeUser())
       dispatch(removeMovies())
+      dispatch(removeMovieInfo())
+      
       navigate('/')
       // Sign-out successful.
     }).catch((error) => {
