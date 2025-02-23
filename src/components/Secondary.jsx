@@ -10,8 +10,8 @@ const Secondary = () => {
 
 
   return (
-    <div className='bg-black pl-4 '>
-      <div className="-mt-[138%] md:-mt-44 ">
+    <div className='bg-black md:pl-4 '>
+      <div className="-mt-[105%] md:-mt-44 ">
         <div>
           {MoviesData.map((el, arr)=><MovieListComponent key={arr} genre={GENRE[arr]} data={el} />)}
         </div>
