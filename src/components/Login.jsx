@@ -70,11 +70,12 @@ const Login = () => {
 
   return (
     <div>
+      <div className="absolute z-20 w-full h-6 bg-black"></div>
       <Header />
       <div className=" absolute">
-        <img src={BACKGROUND_LOGO_URL} alt="Background image" />
+        <img className='h-screen object-cover md:w-screen' src={BACKGROUND_LOGO_URL} alt="Background image" />
       </div>
-      <form className="w-1/3 absolute text-white mt-20 p-14 rounded-lg mx-auto left-0 right-0 bg-black/80 " onSubmit={(e)=>e.preventDefault()}>
+      <form className="w-[80%] md:w-1/3 absolute text-white md:mt-20 mt-[50%] md:p-14 p-8 md:rounded-lg rounded-xl mx-auto left-0 right-0 bg-black/80 " onSubmit={(e)=>e.preventDefault()}>
         <h1 className="mb-4 text-3xl font-bold">{isSignIn?"Sign In":"Sign Up"}</h1>
         {!isSignIn&&<input ref={name} className="w-full p-3 my-3 rounded-lg bg-slate-700 cursor-pointer" type='text' placeholder='Full name' />}
         <input ref={email} className="w-full p-3 my-3 rounded-lg bg-slate-700 cursor-pointer" type='text' placeholder='Email address' />

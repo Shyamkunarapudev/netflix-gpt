@@ -58,9 +58,9 @@ const Header = () => {
   }
 
   return (
-    <div className='absolute bg-gradient-to-b z-50 from-black w-full px-10 py-4 flex justify-between'>
+    <div className=' absolute bg-gradient-to-b z-50 from-black w-full px-10 sm:py-15 md:py-4 py-10 flex justify-between'>
       <div className="">
-        <img className='w-36 -mt-3 cursor-pointer' src={NETFLIX_LOGO_URL} alt="Logo"/>
+        <img className='w-36 sm:w-48 -mt-3 cursor-pointer -ml-5' src={NETFLIX_LOGO_URL} alt="Logo"/>
       </div>
       {user&&<div className="flex">
        <div>
@@ -69,10 +69,10 @@ const Header = () => {
         </select>}
        </div>
         <div className="">
-         <button className='px-2 py-1 ml-3 cursor-pointer  bg-sky-700 font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
+         <button className='px-2 py-1 ml-3 cursor-pointer  bg-sky-700 md:font-semibold text-white rounded-md' onClick={netFlixhandler}>{showGPTButton?"Home":"NetflixGPT"}</button>
         </div>
         <div>
-          <button className='px-2 py-1 mx-3 cursor-pointer  bg-red-600 font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>
+          <button className='px-2 py-1 mx-3 cursor-pointer  bg-red-600 md:font-semibold text-white rounded-md' onClick={signOutHandler}>SignOut</button>
         </div>
         <img className='w-9 h-9 cursor-pointer' src={SIGN_IN_LOGO_URL} alt="profile" />
       </div>}

@@ -42,8 +42,8 @@ const MainContainer = () => {
 
   return (
     <div>
-      <div className="">
-       <iframe className='w-screen h-screen cursor-pointer' src={"https://www.youtube.com/embed/"+movie.youtubeId+"?si=7lHJboLYUjOjY-ch&autoplay=1&mute=1&rel=1&controls=0&modestbranding=1&loop=1"} frameBorder="0"  referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+      <div className="h-screen">
+       <iframe className='h-[40%] pt-[26%] md:p-0 w-screen md:h-screen cursor-pointer' src={"https://www.youtube.com/embed/"+movie.youtubeId+"?si=7lHJboLYUjOjY-ch&autoplay=1&mute=1&rel=1&controls=0&modestbranding=1&loop=1"} frameBorder="0"  referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
       </div>
       <VideoTitle movieTitle={findMovie[0]?.Title} moviePlot={findMovie[0]?.Plot} moreInfo={findMovie[0]}/>
     </div>
